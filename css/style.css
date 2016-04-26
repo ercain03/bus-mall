@@ -1,0 +1,21 @@
+.head h1 {
+  margin-left: 200px;
+}
+
+.firstOne {
+  height: 280px;
+  width: 300px;
+  margin: 30px 20px 0 130px;
+}
+
+.secondOne {
+  height: 280px;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.thirdOne {
+  height: 280px;
+  width: 300px;
+  margin-right: 20px;
+}

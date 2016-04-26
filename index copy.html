@@ -2,24 +2,33 @@
 <html>
 <head>
   <title>Bus Mall -- Tre Cain</title>
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="chart.js"></script>
 </head>
 
 <body>
-  <div id="top">
-    <h1>Bus Mall</h1>
-    <p>What's up? Welcome to bus mall.  As a company we strive to provide customers with the satisfaction they deserve.  We seek to push products that users truly enjoy and love.</p>
-    <h2>Want to help out?</h2>
-    <p>Please provide us with your favorite product information by selecting one of the pictures below:</p>
-  </div>
-
-  <section>
-    <ul id="displated-images">
-      <li id="image-first"></li>
-      <li id="image-second"></li>
-      <li id="image-third"></li>
-    </ul>
-  </section>
+  <div class="container">
+    <div class="row">
+      <div class="column twelve">
+        <div class="head" id="top">
+          <h1>Bus Mall</h1>
+            <p>What's up? Welcome to bus mall.  As a company we strive to provide customers with the satisfaction they deserve.  We seek to push products that users truly enjoy and love.</p>
+          <h2>Want to help out?</h2>
+            <p>Please provide us with your favorite product information by selecting one of the pictures below:</p>
+          </div>
+          <div class="column nine">
+          <div class="imgDiv" id="displated-images">
+            <img class="firstOne u-max-full-width" id="imageFirst">
+            <img class="secondOnd u-max-full-width" id="imageSecond">
+            <img class="thirdOne u-max-full-width" id="imageThird">
+          </div>
+          <canvas id="cust-chart" width="500px" height="500px" style="border: 2px solid red"></canvas>
+        </div>
+        </div>
+      </div>
+    </div>
   <script src="js/app.js"></script>
 </body>
 </html>
