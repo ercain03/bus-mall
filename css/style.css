@@ -1,21 +1,29 @@
-.head h1 {
-  margin-left: 200px;
-}
 
 .firstOne {
-  height: 280px;
-  width: 300px;
-  margin: 30px 20px 0 130px;
+  display: flex;
+  max-height: 280px;
+  max-width: 300px;
 }
 
 .secondOne {
-  height: 280px;
-  width: 300px;
-  margin-right: 20px;
+  display: flex;
+  max-height: 280px;
+  max-width: 300px;
+
 }
 
 .thirdOne {
-  height: 280px;
-  width: 300px;
-  margin-right: 20px;
+  display: flex;
+  max-height: 280px;
+  max-width: 300px;
+  background: red;
+}
+.imgDiv {
+  display: flex;
+  border: 2px solid black;
+  height: 300px;
+  align-content: space-around;
+  flex-direction: row;
+  align-items: center ;
+  border: 2px solid black;
 }
