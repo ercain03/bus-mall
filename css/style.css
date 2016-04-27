@@ -16,27 +16,27 @@ body {
 
 .firstOne {
   display: flex;
-  height: 300px;
-  width: 300px;
+  height: 260px;
+  width: 260px;
   margin-right: 50px;
 }
 
 .secondOne {
   display: flex;
-  height: 300px;
-  width: 300px;
+  height: 260px;
+  width: 260px;
   margin-right: 50px;
 }
 
 .thirdOne {
   display: flex;
-  height: 300px;
-  width: 300px;
+  height: 260px;
+  width: 260px;
   margin-right: 50px;
 }
 .imgDiv {
   display: flex;
-  flex-flow: nowrap;
+  flex-flow: wrap;
   justify-content: space-around;
   margin-top: 30px;
 }
@@ -46,7 +46,14 @@ body {
 }
 #cust-chart {
   margin-top: 100px;
+  padding: 40px;
 }
+
+.butts {
+  display: flex;
+  justify-content: space-around;
+}
+
 
 .circle:hover
 {
@@ -71,4 +78,29 @@ transition: all 0.7s ease;
 
 .blue {
   color: #00b6ff;
+}
+
+hr {
+  border: 0;
+  height: 30px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+.bugging {
+  width:500px;
+  padding-top: 70px;
+  margin: 0 auto;
 }

@@ -73,21 +73,34 @@ imageRender();
 function clickHandler(event){
   var targetEl = event.target;
   if(clickNums === 25){
-    makeChart();
+    document.getElementById('displated-images').style.visibility = 'hidden';
+    document.getElementById('show-chart').style.visibility = 'visible';
+    document.getElementById('ten-more').style.visibility = 'visible';
   }
   for ( var i = 0; i < imageArr.length ; i++){
     if (imageArr[i].name === event.target.id){
       imageArr[i].userClicks++;
-      clickNums ++;
       imageRender();
+      clickNums ++;
       break;
     }
   }
 }
 
+function clickButtonHandler(event){
+  console.log('yup');
+  document.getElementById('show-chart').style.visibility = 'hidden';
+  document.getElementById('ten-more').style.visibility = 'hidden';
+  document.getElementById('cust-chart').style.visibility = 'hidden';
+  document.getElementById('displated-images').style.visibility = 'visible';
+  clickNums = 15;
+}
+
 function makeChart(){
   var names = [];
   var percents = [];
+  document.getElementById('displated-images').style.visibility = 'hidden';
+  document.getElementById('cust-chart').style.visibility = 'visible';
   for (var i = 0; i < imageArr.length; i++){
     names.push(imageArr[i].name);
     percents.push(imageArr[i].userClicks);
@@ -137,4 +150,13 @@ function makeChart(){
 }
 
 var elClicko = document.getElementById('displated-images');
-document.addEventListener('click', clickHandler);
+elClicko.addEventListener('click', clickHandler);
+
+var butClick = document.getElementById('show-chart');
+butClick.addEventListener('click', makeChart);
+
+var butClick2 = document.getElementById('ten-more');
+butClick2.addEventListener('click', clickButtonHandler);
+
+document.getElementById('show-chart').style.visibility = 'hidden';
+document.getElementById('ten-more').style.visibility = 'hidden';
