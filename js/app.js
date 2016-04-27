@@ -72,18 +72,18 @@ imageRender();
 
 function clickHandler(event){
   var targetEl = event.target;
-  if(clickNums === 25){
-    document.getElementById('displated-images').style.visibility = 'hidden';
-    document.getElementById('show-chart').style.visibility = 'visible';
-    document.getElementById('ten-more').style.visibility = 'visible';
-  }
   for ( var i = 0; i < imageArr.length ; i++){
     if (imageArr[i].name === event.target.id){
       imageArr[i].userClicks++;
-      imageRender();
       clickNums ++;
-      break;
     }
+  }
+  if(clickNums < 25){
+    imageRender();
+  }else if (clickNums === 25){
+    document.getElementById('displated-images').style.visibility = 'hidden';
+    document.getElementById('show-chart').style.visibility = 'visible';
+    document.getElementById('ten-more').style.visibility = 'visible';
   }
 }
 
