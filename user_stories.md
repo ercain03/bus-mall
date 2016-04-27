@@ -11,5 +11,3 @@ Developer
 Focus Group Participant
 
 -As a focus group participant, I want to provide marketing research by choosing the product that I would be most likely to purchase.
-
-By: Tre Cain

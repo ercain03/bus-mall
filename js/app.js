@@ -75,15 +75,15 @@ function clickHandler(event){
   if(clickNums === 25){
     makeChart();
   }
-    for ( var i = 0; i < imageArr.length ; i++){
-      if (imageArr[i].name === event.target.id){
-        imageArr[i].userClicks++;
-        clickNums ++;
-        imageRender();
-        break;
-      }
+  for ( var i = 0; i < imageArr.length ; i++){
+    if (imageArr[i].name === event.target.id){
+      imageArr[i].userClicks++;
+      clickNums ++;
+      imageRender();
+      break;
     }
   }
+}
 
 function makeChart(){
   var names = [];
