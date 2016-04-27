@@ -1,29 +1,74 @@
 
+body {
+  background-color: black;
+  color: white;
+}
+.head h1 {
+  font-family:'Rock Salt', cursive;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#indent {
+  text-indent: 5em;
+}
+
 .firstOne {
   display: flex;
-  max-height: 280px;
-  max-width: 300px;
+  height: 300px;
+  width: 300px;
+  margin-right: 50px;
 }
 
 .secondOne {
   display: flex;
-  max-height: 280px;
-  max-width: 300px;
-
+  height: 300px;
+  width: 300px;
+  margin-right: 50px;
 }
 
 .thirdOne {
   display: flex;
-  max-height: 280px;
-  max-width: 300px;
-  background: red;
+  height: 300px;
+  width: 300px;
+  margin-right: 50px;
 }
 .imgDiv {
   display: flex;
-  border: 2px solid black;
-  height: 300px;
-  align-content: space-around;
-  flex-direction: row;
-  align-items: center ;
-  border: 2px solid black;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.canvas {
+  display: flex;
+  justify-content: center;
+}
+#cust-chart {
+  margin-top: 100px;
+}
+
+.circle:hover
+{
+        border-radius:50%;
+}
+.grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+.image:hover {
+-webkit-box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+}
+.image {
+-webkit-box-shadow: 0px 0px 15px 5px rgba(0, 185, 233, .75);
+box-shadow: 0px 0px 15px 5px rgba(0, 185, 233, .75);
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+
+.blue {
+  color: #00b6ff;
 }
