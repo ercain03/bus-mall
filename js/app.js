@@ -1,9 +1,6 @@
 var imageArr = [];
 var randomGenNumbs = [];
 var clickNums = 0;
-var firstPic = document.getElementById('imageFirst');
-var secondPic = document.getElementById('imageSecond');
-var thirdPic = document.getElementById('imageThird');
 
 function randomNumGen(min,max){
   return Math.floor(Math.random() * (max - min)) + min;
@@ -81,26 +78,29 @@ function clickHandler(event){
   if(clickNums < 25){
     imageRender();
   }else if (clickNums === 25){
-    document.getElementById('displated-images').style.visibility = 'hidden';
-    document.getElementById('show-chart').style.visibility = 'visible';
-    document.getElementById('ten-more').style.visibility = 'visible';
+    localStorage.setItem('userClickData', JSON.stringify(imageArr));
+    document.getElementById('displated-images').style.display = 'none';
+    document.getElementById('show-chart').style.display = 'flex';
+    document.getElementById('ten-more').style.display = 'flex';
+    document.getElementById('lcClear').style.display = 'flex';
   }
 }
 
 function clickButtonHandler(event){
   console.log('yup');
-  document.getElementById('show-chart').style.visibility = 'hidden';
-  document.getElementById('ten-more').style.visibility = 'hidden';
-  document.getElementById('cust-chart').style.visibility = 'hidden';
-  document.getElementById('displated-images').style.visibility = 'visible';
+  document.getElementById('show-chart').style.display = 'none';
+  document.getElementById('ten-more').style.display = 'none';
+  document.getElementById('cust-chart').style.display = 'none';
+  document.getElementById('lcClear').style.display = 'none';
+  document.getElementById('displated-images').style.display = 'flex';
   clickNums = 15;
 }
 
 function makeChart(){
   var names = [];
   var percents = [];
-  document.getElementById('displated-images').style.visibility = 'hidden';
-  document.getElementById('cust-chart').style.visibility = 'visible';
+  document.getElementById('displated-images').style.display = 'none';
+  document.getElementById('cust-chart').style.display = 'flex';
   for (var i = 0; i < imageArr.length; i++){
     names.push(imageArr[i].name);
     percents.push(imageArr[i].userClicks);
@@ -158,5 +158,21 @@ butClick.addEventListener('click', makeChart);
 var butClick2 = document.getElementById('ten-more');
 butClick2.addEventListener('click', clickButtonHandler);
 
-document.getElementById('show-chart').style.visibility = 'hidden';
-document.getElementById('ten-more').style.visibility = 'hidden';
+document.getElementById('show-chart').style.display = 'none';
+document.getElementById('ten-more').style.display = 'none';
+document.getElementById('lcClear').style.display = 'none';
+
+(function checkForLocalStorage(){
+  if(localStorage.userClickData){
+    console.log('Storage Exists');
+    var imagesParsed = JSON.parse(localStorage.userClickData);
+    for(var i = 0; i < imageArr.length; i++){
+      imageArr = imagesParsed;
+    };
+  }else{
+    console.log('Storage does not exist');
+  }
+})();
+document.getElementById('lcClear').addEventListener('click', function(){
+  localStorage.clear();
+});

@@ -32,26 +32,28 @@ body {
   display: flex;
   height: 260px;
   width: 260px;
-  margin-right: 50px;
+  margin-right: 80px;
 }
 .imgDiv {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
-  margin-top: 30px;
 }
 .canvas {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 880px;
+  padding-top: 80px;
 }
 #cust-chart {
-  margin-top: 100px;
-  padding: 40px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .butts {
   display: flex;
   justify-content: space-around;
+  width: 910px;
 }
 
 
