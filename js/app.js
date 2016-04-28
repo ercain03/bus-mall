@@ -100,7 +100,10 @@ function makeChart(){
   var names = [];
   var percents = [];
   document.getElementById('displated-images').style.display = 'none';
+  document.getElementById('second-logo').style.display = 'flex';
   document.getElementById('cust-chart').style.display = 'flex';
+  document.getElementById('btnss').style.display = 'none';
+  document.getElementById('top').style.display = 'none';
   for (var i = 0; i < imageArr.length; i++){
     names.push(imageArr[i].name);
     percents.push(imageArr[i].userClicks);
@@ -161,6 +164,7 @@ butClick2.addEventListener('click', clickButtonHandler);
 document.getElementById('show-chart').style.display = 'none';
 document.getElementById('ten-more').style.display = 'none';
 document.getElementById('lcClear').style.display = 'none';
+document.getElementById('second-logo').style.display = 'none';
 
 (function checkForLocalStorage(){
   if(localStorage.userClickData){
