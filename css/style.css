@@ -1,7 +1,9 @@
 
 body {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #00b6ff;
+  font-style: normal;
+  font-size: 14px;
 }
 .head h1 {
   font-family:'Rock Salt', cursive;
